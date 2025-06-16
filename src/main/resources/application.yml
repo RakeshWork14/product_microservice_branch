@@ -33,7 +33,8 @@ spring:
       on-profile: dev
   datasource:
     password: database
-    url: jdbc:mysql://35.226.244.25:3306/learnerCrownClothing?useSSL=FALSE
+    url: jdbc:mysql://35.226.244.25:3306/learnerCrownClothing?useSSL=false&allowPublicKeyRetrieval=true
+    #url: jdbc:mysql://35.226.244.25:3306/learnerCrownClothing?useSSL=FALSE
     username: db_user
   jpa:
     hibernate:
