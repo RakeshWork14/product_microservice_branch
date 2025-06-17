@@ -4,7 +4,7 @@
 // "@main" you defualt version in manage jenkins or  git branch of your shared librarys
 @Library("i27academy-slb@main") _
     dockerPipeline(
-        appName: 'eureka',
+        appName: 'product',
         devPort: '5761',
         testPort: '6761',
         stagePort: '7761',
