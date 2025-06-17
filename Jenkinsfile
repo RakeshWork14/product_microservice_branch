@@ -5,9 +5,9 @@
 @Library("i27academy-slb@main") _
     dockerPipeline(
         appName: 'product',
-        devPort: '5761',
-        testPort: '6761',
-        stagePort: '7761',
-        prodPort: '8761',
-        contPort: '8761'
+        devPort: '5132',
+        testPort: '6132',
+        stagePort: '7132',
+        prodPort: '8132',
+        contPort: '8132'
     )
