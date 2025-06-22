@@ -27,7 +27,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8132 # this is port on which service is running
+  - port: 80 # this is port on which service is running
     targetPort: 8132 # port where container is running
   selector:
     app: i27-product-dev
