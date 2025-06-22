@@ -1,7 +1,0 @@
-fullname: i27-eureka
-replicas:
-  default: 2
-image: 
-  name: docker.io/i27devopsb6/eureka
-  tag: random
-targetPort: 8761
