@@ -2,34 +2,34 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: i27-product-dev
-#  namespace: cart-dev-ns
+  name: i27-product-test
+#  namespace: cart-test-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-        app: i27-product-dev
+        app: i27-product-test
   template:
     metadata:
       labels:
-        app: i27-product-dev
+        app: i27-product-test
     spec:
       imagePullSecrets: 
-      - name: docker-secret  #same name you created "docker-registry secret" under dev namespace
+      - name: docker-secret  #same name you created "docker-registry secret" under test namespace
       containers:
-      - name: i27-product-dev
+      - name: i27-product-test
         image: DIT # this image along with tag will be replaced dynamically from shared lib
 --- 
 apiVersion: v1
 kind: Service 
 metadata:
-  name: i27-product-dev
+  name: i27-product-test
   labels:
-    app: i27-product-dev
+    app: i27-product-test
 spec:
   type: NodePort
   ports:
   - port: 80 # this is port on which service is running
     targetPort: 8132 # port where container is running
   selector:
-    app: i27-product-dev
+    app: i27-product-test
